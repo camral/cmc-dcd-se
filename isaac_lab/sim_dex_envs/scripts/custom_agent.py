@@ -104,7 +104,6 @@ def main():
                  
             
             # apply actions
-            # TODO uncomment for deformation actions = (actions, simulation_app)
             env.step(actions)
             counter += 1
 
