@@ -1,0 +1,63 @@
+seed: 42
+
+models:
+  separate: False
+  policy:  # see https://skrl.readthedocs.io/en/latest/api/models/gaussian.html
+    class: GaussianMLP
+    clip_actions: False
+    clip_log_std: True
+    initial_log_std: 0
+    min_log_std: -20.0
+    max_log_std: 2.0
+    input_shape: "Shape.STATES"
+    hiddens: [256, 128, 64]
+    hidden_activation: ["elu", "elu", "elu"]
+    output_shape: "Shape.ACTIONS"
+    output_activation: ""
+    output_scale: 1.0
+  value:  # see https://skrl.readthedocs.io/en/latest/api/models/deterministic.html
+    class: DeterministicMLP
+    clip_actions: False
+    input_shape: "Shape.STATES"
+    hiddens: [256, 128, 64]
+    hidden_activation: ["elu", "elu", "elu"]
+    output_shape: "Shape.ONE"
+    output_activation: ""
+    output_scale: 1.0
+
+memory:
+  class: RandomMemory
+  memory_size: 1000
+
+agent:
+  class: PPO
+  rollouts: 1000  # number of rollouts before updating
+  learning_epochs: 8
+  mini_batches: 8  # number of mini batches during each learning epoch
+  discount_factor: 0.99
+  lambda: 0.95  # TD(λ) coefficient (lam) for computing returns and advantages
+  learning_rate: 3.0e-4
+  learning_rate_scheduler: KLAdaptiveRL
+  learning_rate_scheduler_kwargs:
+    kl_threshold: 0.008
+  state_preprocessor: RunningStandardScaler
+  state_preprocessor_kwargs: null
+  value_preprocessor: RunningStandardScaler
+  value_preprocessor_kwargs: null
+  random_timesteps: 0
+  learning_starts: 0
+  grad_norm_clip: 1.0
+  ratio_clip: 0.2  # clipping coefficient for the surrogate objective
+  value_clip: 0.2  # clipping coefficient for the value function loss
+  clip_predicted_values: True  # clip predicted values during value function loss computation
+  entropy_loss_scale: 0.0  # entropy loss scaling factor
+  value_loss_scale: 2.0  # value function loss scaling factor
+  kl_threshold: 0  # KL divergence threshold for early stopping
+  rewards_shaper_scale: 1.0  # rewards shaping scale
+  time_limit_bootstrap: False  # bootstrap at timeout termination (episode truncation)
+  # logging and checkpoint
+  experiment:
+    directory: "logs/skrl"
+    experiment_name: ""
+    write_interval: auto
+    checkpoint_interval: 1000

@@ -1,0 +1,5 @@
+The usd was taken from https://www.mcmaster.com/products/boxes/tote-boxes-1~/tote-boxes-with-interlocking-lids/
+downloaded as 3D-STEP file, then converted to USDC with https://imagetostl.com/convert/file/step/to/usd#convert
+then in isaacsim, we rescaled each of the three different bodies in the USD to be of the right size. Then we 
+`grouped` the three different bodies. Then, exported that group as usd. Ran sim_dex_envs/source/sim_dex_utils/usd_utilities.py
+changing the last two lines (see commit 2f70b7b of sim_dex_envs).

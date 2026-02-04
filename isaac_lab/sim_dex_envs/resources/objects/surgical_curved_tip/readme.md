@@ -1,0 +1,2 @@
+
+./isaaclab.sh -p scripts/tools/convert_mesh.py sim_dex_envs/resources/objects/surgical_curved_tip/surgical_curved_tip.obj im_dex_envs/resources/objects/surgical_curved_tip/surgical_curved_tip.usd --mass 0.1 --collision-approximation convexHull  --rotate 0 0 -90 --scale 0.2

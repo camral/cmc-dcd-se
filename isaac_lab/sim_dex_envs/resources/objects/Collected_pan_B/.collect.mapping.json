@@ -1,0 +1,29 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Textures/Pan_B_albedo.png",
+            "source_hash": "0655fdec69f454562c1812a00369b6e17ffcc0d0",
+            "target_url": "./Textures/Pan_B_albedo.png",
+            "target_hash": "23dd382c2ff7fb895cf6ae991a78db0235145742"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Textures/Pan_B_metal.png",
+            "source_hash": "3486fc3cf9708b8e63116bbfb65124369eb0d4ca",
+            "target_url": "./Textures/Pan_B_metal.png",
+            "target_hash": "d35eec58d97f4294d19340505ff06ce1679e0e32"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Textures/Pan_B_normal.png",
+            "source_hash": "018ec0576a7a9fd24feeb68a21b73f2fd52dfad6",
+            "target_url": "./Textures/Pan_B_normal.png",
+            "target_hash": "eba3a0f7246b93852cc36e0ab7d4c9b1d37f4eaf"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Textures/Pan_B_rough.png",
+            "source_hash": "3ea169e8b9cd24d3ba9ff61acfea0eff76bfa8f4",
+            "target_url": "./Textures/Pan_B_rough.png",
+            "target_hash": "fd58f27eeb04de4a3f1885915813339ac8189298"
+        }
+    ]
+}
