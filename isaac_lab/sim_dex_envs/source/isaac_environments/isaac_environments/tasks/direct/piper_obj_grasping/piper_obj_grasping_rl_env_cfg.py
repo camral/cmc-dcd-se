@@ -99,7 +99,7 @@ class PiperObjGraspingEnvCfg(DirectRLEnvCfg):
     
     # scene
     scene: InteractiveSceneCfg = InteractiveSceneCfg(num_envs=1, env_spacing=4.0, replicate_physics=True)
-    background: str = "none" # one of: "none", "hospital", "warehouse", "automatic" (chosen based on the target obj)
+    background: str = "hospital" # one of: "none", "hospital", "warehouse", "automatic" (chosen based on the target obj)
 
     dof_names = ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6", "joint7", "joint8"]  # Main arm joints + gripper
 
