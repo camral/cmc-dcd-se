@@ -28,7 +28,7 @@ It allows you to develop in an isolated environment, outside of the core Isaac L
 
 - Verify that the extension is correctly installed by:
 
-    - Listing the available tasks:
+    - Listing the available tasks (sometimes this fails for headless reasons by saying it cannot import omni.kit.viewport, ignore this error its fine):
 
         Note: It the task name changes, it may be necessary to update the search pattern `"Template-"`
         (in the `scripts/list_envs.py` file) so that it can be listed.
